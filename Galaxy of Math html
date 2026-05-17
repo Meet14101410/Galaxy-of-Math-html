@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galaxy of Math</title>
+  <style>
+    body{
+      text-align:center;
+      background:black;
+      color:white;
+      font-family:Arial;
+    }
+    .box{
+      margin-top:100px;
+    }
+    input,button{
+      padding:10px;
+      font-size:18px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>🌌 Galaxy of Math</h1>
+  <p id="q"></p>
+  <input type="number" id="ans">
+  <button onclick="check()">Submit</button>
+  <h2 id="result"></h2>
+</div>
+
+<script>
+let a=Math.floor(Math.random()*10);
+let b=Math.floor(Math.random()*10);
+
+document.getElementById("q").innerHTML =
+`What is ${a} + ${b} ?`;
+
+function check(){
+  let user=document.getElementById("ans").value;
+  
+  if(user == a+b){
+    document.getElementById("result").innerHTML =
+    "⭐ Correct!";
+  }else{
+    document.getElementById("result").innerHTML =
+    "❌ Wrong!";
+  }
+}
+</script>
+
+</body>
+</html>
